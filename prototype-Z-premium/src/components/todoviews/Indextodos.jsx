@@ -9,12 +9,13 @@ function Indextodos() {
     const navigate = useNavigate();
 
     const [todos,setTodos] = useState([]);
-   useEffect(()=>{
     async function echoData(){
         const response = await axios.get('http://127.0.0.1:8000/api/brief/');
         console.log(response.data);
         setTodos(response.data);
     }
+   useEffect(()=>{
+    
     echoData();
 
    },[]);
@@ -32,6 +33,7 @@ const SetData = (Todo) => {
    const deletetodo = async (id) => {
     console.log(id)
     await axios.delete(`http://127.0.0.1:8000/api/brief/${id}`);
+    echoData()
     navigate('/indextodos')
 
    }

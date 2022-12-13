@@ -2,6 +2,10 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import './style.css';
+import { useNavigate } from "react-router-dom";
+
+
+
 
 
 const Addtodos = () => {
@@ -9,6 +13,7 @@ const Addtodos = () => {
     todo:""
 
    })
+   const navigate = useNavigate();
    const captureValue = (evt) =>{
     console.log(evt.target)
     const name = evt.target.name;
@@ -19,6 +24,9 @@ const Addtodos = () => {
    const AddTodos = async (e)=>{
     e.preventDefault();
     await axios.post('http://127.0.0.1:8000/api/brief/',formvalue).then((res)=>{
+      
+    navigate('/indextodos')
+      
       console.log(res.data);
       });
 
