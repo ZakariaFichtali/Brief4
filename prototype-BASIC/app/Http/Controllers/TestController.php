@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 
 class testController extends Controller
 {
-    //
+    ////////////////////////////////////////////////
     public function store(Request $request){
         $brief = new test1;
         $brief->todo = $request->todo;
         $brief->save();
         return response()->json($brief);
     }
+
+
     public function select(){
         $briefs = test1::all();
         return response()->json($briefs);

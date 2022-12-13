@@ -116,7 +116,12 @@ h1{
 .new{
   float: right;
   border: #432C7A 2px 1px solid;
-  margin-top: 200px;
+  /* margin-top: 200px; */
+  background-color: #FF8FB1;
+  height: 20px;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: -20px;
 }
 .all{
   margin-top: 20px;
@@ -127,7 +132,8 @@ h1{
 }
 table{
   background-color: #432C7A;
-  margin-left: -140px;
+  margin-left: -230px;
+  /* width: 100%; */
 
 }
 
@@ -141,4 +147,9 @@ td{
   width: 300px;
 }
 
+button:hover{
+background-color: #5632a8;
+transition: 1s;
+
+}
 /* ========================================  Indextodos  ================================================== */
