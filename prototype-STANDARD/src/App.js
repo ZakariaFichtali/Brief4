@@ -11,15 +11,16 @@ import {BrowserRouter} from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      
 
     <nav className="nav">
         <ul className="ul">
             <li className="li">
               <Link to="/" >Home</Link>  </li>
             <li  className="li"> 
-              <Link to="/Indextodos" >Indextodos</Link> </li>
+              <Link to="/Indextodos" >Index Todos</Link> </li>
             <li  className="li">
-            <Link to="/Addtodos" >Addtodos</Link>  </li>
+            <Link to="/Addtodos" >Add Todos</Link>  </li>
         
             {/* <li  className="li">
             <Link to="/Edittodos/:id" >Edittodos</Link> 
@@ -34,7 +35,9 @@ function App() {
       <Route path='/Edittodos/:id' element={<Edittodos/>}/>
      </Routes>
 
+     <h1>Go To Indextodos</h1>  
     </div>
+    
     
 
   );
