@@ -9,9 +9,7 @@ class testController extends Controller
     //
     public function store(Request $request){
         $brief = new test1;
-        $brief->firstname = $request->firstname;
-        $brief->lastname = $request->lastname;
-        $brief->email = $request->email;
+        $brief->todo = $request->todo;
         $brief->save();
         return response()->json($brief);
     }
@@ -27,15 +25,13 @@ class testController extends Controller
     }
 
     public function edit($id){
-        $brief = test1::find($id)->first();
+        $brief = test1::find($id);
         return response()->json($brief);
     }
 
     public function update(Request $request,$id){
         $brief = test1::find($id);
-        $brief->firstname = $request->firstname;
-        $brief->lastname = $request->lastname;
-        $brief->email = $request->email;
+        $brief->todo = $request->todo;
         $brief->save();
         return $brief;
     }
